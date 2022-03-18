@@ -21,27 +21,31 @@
     <title>Frontend Mentor | Todo app</title>
   </head>
   <body>
-    <img class="header__bg-img-mobile" src="assets/bg-mobile-dark.jpg" alt="" />
-    <img
-      class="header__bg-img-desktop"
-      src="assets/bg-desktop-dark.jpg"
-      alt=""
-    />
-    <header class="header">
-      <h1 id="logo">TODO</h1>
-      <div class="header__icon-container">
-        <img class="header__icon" src="assets/icon-sun.svg" alt="" />
-        <label for="theme">
-          <input class="checkbox" type="checkbox" name="theme" id="theme" />
-        </label>
-      </div>
-    </header>
     <main>
+      <img
+        class="header__bg-img-mobile"
+        src="assets/bg-mobile-dark.jpg"
+        alt=""
+      />
+      <img
+        class="header__bg-img-desktop"
+        src="assets/bg-desktop-dark.jpg"
+        alt=""
+      />
+      <header class="header">
+        <h1 id="logo">TODO</h1>
+        <div class="header__icon-container">
+          <img class="header__icon" src="assets/icon-sun.svg" alt="" />
+          <label for="theme">
+            <input class="checkbox" type="checkbox" name="theme" id="theme" />
+          </label>
+        </div>
+      </header>
       <form class="form__add">
-        <button class="todo__add btn">
+        <button class="todo__add btn" aria-label="create todo">
           <img class="btn__img" src="assets/icon-check.svg" alt="" />
         </button>
-        <label for="add">
+        <label for="form__add">
           <input
             class="form__add__input theme-style"
             type="text"
@@ -54,10 +58,13 @@
 
       <ul class="todos">
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">Create your own todos so you won't forget</p>
 
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -66,11 +73,14 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">
             Mark as complete by pressing the left circle
           </p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -79,11 +89,14 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">
             Or delete a todo by pressing the right X mark
           </p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -92,11 +105,14 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">
             You can filter 'All', 'Active' and 'Completed' todos below
           </p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -105,9 +121,12 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">Search for todos by typing in the box above</p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -116,12 +135,15 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">
             Toggle between light and dark mode, by pressing the sun/moon icon
             above
           </p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -130,11 +152,14 @@
           </button>
         </li>
         <li class="todos__item todo-style" draggable="true">
-          <button class="todos__complete btn"></button>
+          <button
+            class="todos__complete btn"
+            aria-label="complete todo"
+          ></button>
           <p class="todos__text">
             Drag and drop todo items, to re-position them
           </p>
-          <button class="todos__delete">
+          <button class="todos__delete" aria-label="delete todo">
             <img
               class="todos__delete__img"
               src="assets/icon-cross.svg"
@@ -145,12 +170,26 @@
       </ul>
       <div class="todos__info todo-style">
         <p class="todos__remaining"></p>
-        <button class="todos__delete-all">Clear Completed</button>
+        <button class="todos__delete-all" aria-label="delete completed todos">
+          Clear Completed
+        </button>
       </div>
       <div class="todos__filter todo-style">
-        <button class="todos__all btn-filter">All</button>
-        <button class="todos__active btn-filter">Active</button>
-        <button class="todos__completed btn-filter">Completed</button>
+        <button class="todos__all btn-filter" aria-label="display all todos">
+          All
+        </button>
+        <button
+          class="todos__active btn-filter"
+          aria-label="display active todos"
+        >
+          Active
+        </button>
+        <button
+          class="todos__completed btn-filter"
+          aria-label="display completed todos"
+        >
+          Completed
+        </button>
       </div>
       <p class="user-instruction">Drag and drop to reorder list</p>
     </main>
