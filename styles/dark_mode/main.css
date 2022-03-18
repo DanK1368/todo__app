@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -41,7 +41,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -66,12 +66,12 @@ select {
   }
 
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -140,7 +140,7 @@ li {
   height: 200px;
   z-index: -1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media only screen and (min-width: 640px) {
   .header__bg-img-mobile {
@@ -156,7 +156,7 @@ li {
   height: 300px;
   z-index: -1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: none;
 }
 @media only screen and (min-width: 640px) {
@@ -216,7 +216,8 @@ li {
   cursor: pointer;
 }
 .btn:hover {
-  background: linear-gradient(#25273c, #25273c) padding-box, linear-gradient(to bottom right, #57ddff, #c058f3) border-box;
+  background: linear-gradient(#25273c, #25273c) padding-box,
+    linear-gradient(to bottom right, #57ddff, #c058f3) border-box;
   border: 1.4px solid transparent;
 }
 .btn img {
@@ -296,7 +297,7 @@ li {
   justify-content: center;
   align-items: center;
   -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
 }
 
 .user-instruction {
@@ -329,10 +330,10 @@ li {
   transform: translate(-25%, -25%);
   height: 95%;
   width: 95%;
-  background-image: url("../assets/icon-check.svg");
+  background-image: url(../../../assets/icon-check.svg);
   background-repeat: no-repeat;
 }
 
 .todos__item.dragging {
   opacity: 0.5;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
