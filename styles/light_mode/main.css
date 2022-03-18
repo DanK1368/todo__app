@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  background: #e4e5f1;
+}
+
+h1 {
+  font-size: 3.2rem;
+  letter-spacing: 1rem;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.todos__text {
+  font-size: clamp(1.2rem, 0.8rem + 1vw, 1.8rem);
+  color: #161722;
+}
+
+.todos__info p {
+  color: #777a92;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 0.5rem + 1vw, 1.4rem);
+}
+
+.todos__filter * {
+  font-size: 1.4rem;
+  color: #777a92;
+  font-weight: 400;
+}
+
+.theme-style {
+  background: #fafafa;
+  padding: 1.7rem 6rem;
+  color: #161722;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 400;
+}
+
+.todo-style {
+  background: #fafafa;
+  padding: 1.7rem 1rem 1.7rem 2.5rem;
+  border-bottom: 1px solid #d2d3db;
+  outline: none;
+  font-weight: 300;
+}
+
+.header__bg-img-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 640px) {
+  .header__bg-img-mobile {
+    display: none;
+  }
+}
+
+.header__bg-img-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+@media only screen and (min-width: 640px) {
+  .header__bg-img-desktop {
+    display: block;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  padding: 3.5rem 0 2.5rem 0;
+}
+.header__icon-container {
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form__add {
+  font-size: clamp(1.2rem, 0.5rem + 1vw, 1.8rem);
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  color: #e4e5f1;
+}
+
+.form__add {
+  position: relative;
+}
+.form__add__input {
+  width: 100%;
+}
+
+.btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #777a92;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(#fafafa, #fafafa) padding-box, linear-gradient(to bottom right, #57ddff, #c058f3) border-box;
+  border: 1.4px solid transparent;
+}
+.btn img {
+  display: none;
+}
+
+.todos__delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.todos__delete__img {
+  width: 80%;
+}
+
+.todos__delete-all {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #777a92;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.todos__delete-all:hover {
+  color: #e4e5f1;
+}
+
+.btn-filter {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn-filter:hover {
+  color: #25273c;
+}
+.btn-filter:focus {
+  color: #3a7bfd;
+}
+
+.todos {
+  width: clamp(327px, 85%, 540px);
+  margin: 2rem auto 0 auto;
+  padding: 0;
+}
+.todos__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: move;
+}
+.todos__text {
+  padding-left: 4rem;
+  transition: color 1s ease-in-out;
+}
+
+.todos__info {
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+  border-bottom: none;
+}
+
+.todos__filter {
+  width: clamp(327px, 85%, 540px);
+  margin: 2rem auto 0 auto;
+  border-radius: 5px;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.user-instruction {
+  width: 85%;
+  margin: 4rem auto;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #777a92;
+  font-weight: 300;
+}
+
+.filtered {
+  display: none !important;
+}
+
+.completed p {
+  text-decoration: line-through;
+  color: #cacde8;
+  transition: color 0.5s ease-in-out;
+}
+.completed button:first-of-type {
+  background: linear-gradient(to bottom right, #57ddff, #c058f3);
+  border: none;
+}
+.completed button:first-of-type::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-25%, -25%);
+  height: 95%;
+  width: 95%;
+  background-image: url("/assets/icon-check.svg");
+  background-repeat: no-repeat;
+}
+
+.todos__item.dragging {
+  opacity: 0.5;
+}/*# sourceMappingURL=main.css.map */

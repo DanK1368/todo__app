@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+@use "./reset";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+$main-font: "Josefin Sans", sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $main-font;
+  min-height: 100vh;
+  background: $bg-color-dm;
+  transition: background 0.5s ease-in;
+}
+
+h1 {
+  font-size: 3.2rem;
+  letter-spacing: 1rem;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.todos__text {
+  font-size: clamp(1.2rem, (0.8rem + 1vw), 1.8rem);
+  color: $primary-text-dm;
+}
+
+.todos__info p {
+  color: $button-radius;
+  font-weight: 400;
+  font-size: clamp(1.2rem, (0.5rem + 1vw), 1.4rem);
+}
+
+.todos__filter * {
+  font-size: 1.4rem;
+  color: $button-radius;
+  font-weight: 400;
+}
+
+.theme-style {
+  background: $bg-todo-dm;
+  padding: 1.7rem 6rem;
+  color: $secondary-text-dm;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 300;
+}
+
+.todo-style {
+  background: $bg-todo-dm;
+  padding: 1.7rem 1rem 1.7rem 2.5rem;
+  border-bottom: 1px solid $border-bottom;
+  outline: none;
+  font-weight: 300;
+}

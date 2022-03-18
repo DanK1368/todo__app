@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.header__bg-img-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  object-fit: cover;
+
+  @include md {
+    display: none;
+  }
+}
+
+.header__bg-img-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  object-fit: cover;
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+.header {
+  @include flex(row, space-between, center);
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  padding: 3.5rem 0 2.5rem 0;
+
+  &__icon-container {
+    position: relative;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}

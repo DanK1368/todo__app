@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.form__add {
+  font-size: clamp(1.2rem, (0.5rem + 1vw), 1.8rem);
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  color: $primary-text-dm;
+}
+
+.form__add {
+  position: relative;
+  &__input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,17 @@
+$active-color: hsl(220, 98%, 61%);
+$bg-color-dm: hsl(235, 21%, 11%);
+$bg-todo-dm: hsl(235, 24%, 19%);
+$primary-text-dm: hsl(236, 33%, 92%);
+$secondary-text-dm: hsl(234, 39%, 85%);
+$completed-todo-dm: hsl(233, 14%, 35%);
+
+$button-radius: hsl(234, 11%, 52%);
+$border-bottom: hsl(237, 14%, 26%);
+
+// Gradient
+
+$gradient-color: linear-gradient(
+  to bottom right,
+  hsl(192, 100%, 67%),
+  hsl(280, 87%, 65%)
+);

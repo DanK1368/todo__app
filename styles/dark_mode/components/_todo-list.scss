@@ -1,0 +1,77 @@
+@use "../abstracts" as *;
+
+.todos {
+  width: clamp(327px, 85%, 540px);
+  margin: 2rem auto 0 auto;
+  padding: 0;
+
+  &__item {
+    @include flex(row, space-between, center);
+    position: relative;
+    cursor: move;
+  }
+
+  &__text {
+    padding-left: 4rem;
+    transition: color 1s ease-in-out;
+  }
+}
+
+.todos__info {
+  width: clamp(327px, 85%, 540px);
+  margin: 0 auto;
+  @include flex(row, space-between, center);
+  border-radius: 0 0 5px 5px;
+  border-bottom: none;
+}
+
+.todos__filter {
+  width: clamp(327px, 85%, 540px);
+  margin: 2rem auto 0 auto;
+  border-radius: 5px;
+  border-bottom: none;
+  @include flex(row, center, center);
+  column-gap: 2rem;
+}
+
+.user-instruction {
+  width: 85%;
+  margin: 4rem auto;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $button-radius;
+  font-weight: 300;
+}
+
+.filtered {
+  display: none !important;
+}
+
+.completed {
+  p {
+    text-decoration: line-through;
+    color: $completed-todo-dm;
+    transition: color 0.5s ease-in-out;
+  }
+
+  & button:first-of-type {
+    background: $gradient-color;
+    border: none;
+  }
+
+  & button:first-of-type::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-25%, -25%);
+    height: 95%;
+    width: 95%;
+    background-image: url("/assets/icon-check.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.todos__item.dragging {
+  opacity: 0.5;
+}

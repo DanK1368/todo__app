@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+//Mark complete button
+.btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid $button-radius;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient($bg-todo-lm, $bg-todo-lm) padding-box,
+      $gradient-color border-box;
+    border: 1.4px solid transparent;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+//delete todo button
+
+.todos__delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__img {
+    width: 80%;
+  }
+}
+
+.todos__delete-all {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: $button-radius;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: right;
+
+  &:hover {
+    color: $primary-text-dm;
+  }
+}
+
+.btn-filter {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color-lm;
+  }
+
+  &:focus {
+    color: $active-color;
+  }
+}
