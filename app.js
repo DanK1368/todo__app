@@ -23,21 +23,21 @@ todoCount();
 
 //template for new todo
 const todoTemplate = (todo) => {
-  const html = `
-    <li class="todos__item todo-style" draggable="true">
-    <button class="todos__complete btn"></button>
+  const li = document.createElement("li");
+  li.draggable = true;
+  li.classList.add("todos__item", "todo-style");
+  li.innerHTML = `
+  <button class="todos__complete btn"></button>
     <p class="todos__text">${todo}</p>
-
     <button class="todos__delete">
-    <img
-      class="todos__delete__img"
-      src="assets/icon-cross.svg"
-      alt="an icon with the symbol x that will allow you to delete the selected todo "
-    />
-    </button>
-    </li>`;
-
-  todoList.innerHTML += html;
+        <img
+            class="todos__delete__img"
+            src="assets/icon-cross.svg"
+            alt="an icon with the symbol x that will allow you to delete the selected todo "
+        />
+    </button>`;
+  initTodoDragging(li);
+  todoList.appendChild(li);
 };
 
 //generate new todo
@@ -142,15 +142,16 @@ themeToggler.addEventListener("change", (e) => {
   }
 });
 
-//draggable todo feature
-draggables.forEach((item) => {
+//drag and drop feature
+function initTodoDragging(item) {
   item.addEventListener("dragstart", () => {
     item.classList.add("dragging");
   });
   item.addEventListener("dragend", () => {
     item.classList.remove("dragging");
   });
-});
+}
+document.querySelectorAll(".todos__item").forEach(initTodoDragging);
 
 todoList.addEventListener("dragover", (e) => {
   e.preventDefault();
